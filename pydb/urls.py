@@ -19,5 +19,6 @@ from pydb import views
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
     url(r'hello/', views.hello),
-    url(r'demo/', views.demo)
+    url(r'demo/', views.demo),
+    url(r'/',views.index)
 ]
