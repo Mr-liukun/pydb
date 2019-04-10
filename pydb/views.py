@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from redis import StrictRedis
 
 def hello(request):
-   pydb = pymysql.connect("172.17.0.5", "root", "123456", "onedb")
+   pydb = pymysql.connect("172.17.0.2", "root", "root", "onedb")
    cu = pydb.cursor()
    cu.execute("select id, name, score from student")
    re = cu.fetchall()
