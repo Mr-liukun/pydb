@@ -26,9 +26,8 @@ SECRET_KEY = 'klxrb*sr&uwgkl@6=w8m)hx&k%by^96amzkf))1%^ry&=l69c4'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "120.79.50.118",
-    "localhost",
-    "http://www.jsxon.com",
+    "*",
+
 ]
 
 
