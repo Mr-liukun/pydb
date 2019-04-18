@@ -18,7 +18,7 @@ from django.contrib import admin
 from pydb import views
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
-    url(r'redis/', views.redis),
+    #url(r'redis/', views.redis),
     url(r'mysql/', views.mysql),
     url(r'demo/',views.demo)
 ]

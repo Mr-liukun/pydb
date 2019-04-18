@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+</head>
+<body>
+<div class="container">
+<table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <td style="font-weight:bold;font-size:20px">id</td>
+        <td style="font-weight:bold;font-size:20px">title</td>
+        <td style="font-weight:bold;font-size:20px">type</td>
+        <td style="font-weight:bold;font-size:20px">url</td>
+        <td style="font-weight:bold;font-size:20px">time</td>
+    </tr>
+    </thead>
+    {%  for bo in bole %}
+    <tr>
+        <td>{{ bo.id }}</td>
+        <td>{{ bo.title }}</td>
+        <td>{{ bo.type }}</td>
+        <td><a href="{{ bo.url  }}" target="_blank">{{ bo.url }}</a></td>
+        <td>{{ bo.time }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</div>
+</body>
+</html>
