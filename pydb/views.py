@@ -7,14 +7,14 @@ from redis import StrictRedis
 from pydb.student import Bole
 from django.shortcuts import render
 def mysql(request):
-   #pydb = pymysql.connect("172.17.0.2", "root", "root", "onedb")
-   pydb = pymysql.connect("localhost", "root", "123", "onedb")
+   pydb = pymysql.connect("172.17.0.2", "root", "root", "onedb")
+   #pydb = pymysql.connect("localhost", "root", "123", "onedb")
    cu = pydb.cursor()
 
    #id = request.GET["id"]
 
    #sql = "select id, title, type, time, url from bole where id = %s" % (id)
-   sql = "select id, title, type, time, url from bole"
+   sql = "select id, title, type, time, url from bole limit 20"
    cu.execute(sql)
    re = cu.fetchall()
    bs = []
@@ -41,4 +41,4 @@ def mysql(request):
 #
 #
 def demo(request):
-   return render(request, "two.html")
+   return HttpResponse("ok")
